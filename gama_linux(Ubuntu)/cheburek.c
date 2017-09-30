@@ -64,7 +64,7 @@ int menu(FILE *save,char (*field)[9],char * AI){
         case 1:
             system("clear");
             printf("Goodbye. See you later.\n");
-            //system("mpg123 Quit.wav");
+
             sleep(1);
             system("clear");
             exit(0);
@@ -75,7 +75,7 @@ int menu(FILE *save,char (*field)[9],char * AI){
             system("clear");
 
             printf("Game saved.\n");
-            //system("mpg123 Save.wav");
+
             sleep(1);
             system("clear");
 
@@ -86,7 +86,7 @@ int menu(FILE *save,char (*field)[9],char * AI){
             system("clear");
 
             printf("Game loaded.\n");
-            //system("mpg123 Load.wav");
+
             sleep(1);
             system("clear");
 
@@ -95,7 +95,7 @@ int menu(FILE *save,char (*field)[9],char * AI){
             system("clear");
 
             printf("Cheburek\nCreated by Bredian\n2017, Dolgop\n");
-            //system("mpg123 Credit.mp3");
+
             sleep(1);
             system("clear");
 
@@ -255,7 +255,7 @@ int main(int argc,  char * argv[], char * envp[]) {
     char answer;
     if (log==NULL) printf("Game log error: file does not exists or created\n");
     if (log!=NULL) printf("Game log is OK\n");
-    //system("mpg123 logok.wav");
+
     sleep(1);
     system("clear");
     int i,j,node,h,v,turn=1;
@@ -285,10 +285,7 @@ int main(int argc,  char * argv[], char * envp[]) {
         }
         
     }
-    /*if(pill==0){
-        //execlp("mpg123","mpg123","Startup.mp3",0);
-    }*/
-    //system("mpg123 Startup.wav");
+
     system("clear");
     
     FILE *autosaves = fopen("autosave.txt", "r+");
@@ -302,30 +299,7 @@ int main(int argc,  char * argv[], char * envp[]) {
 
     system("clear");
 
-    /*int pid = fork();
-    
-    if( pid == 0 ){
-            int g=rand()%4;
-            switch (g) {
-                case 0:
-                   // execlp("mpg123","mpg123","Gwent1.mp3",0);
-                    break;
-                case 1:
-                  //  execlp("mpg123","mpg123","Gwent2.mp3",0);
-                    break;
-                case 2:
-                  //  execlp("mpg123","mpg123","Gwent3.mp3",0);
-                    break;
-                case 3:
-                  //  execlp("mpg123","mpg123","Gwent4.mp3",0);
-                    break;
-                default:
-                    break;
-            }
-        
 
-    }*/
-    //if(pid>0){
     if(strcmp(argv[2],"-1")==0 && answer=='n') make_turn_1(field);
     if(strcmp(argv[2],"-c")!=0) print_field(field);
     while(check_endgame(field)==0){
@@ -342,13 +316,13 @@ int main(int argc,  char * argv[], char * envp[]) {
                 }
                 else if(strcmp(argv[2],"-2")==0){
                     field[h-1][v-1]='x';
-                  //  system("mpg123 Turn.wav");
+             
                 }
 
             }
             else {
                 printf("Fuck you\n");
-              //  system("mpg123 Fuck.wav");
+
                 continue;
             }
             if(strcmp(argv[2],"-1")==0){
@@ -379,11 +353,11 @@ int main(int argc,  char * argv[], char * envp[]) {
             }
             else if(field[h-1][v-1]=='.') {
                     field[h-1][v-1]='x';
-                   // system("mpg123 Turn.wav");
+
             }
             else {
                 printf("Fuck you\n");
-               // system("mpg123 Fuck.wav");
+
                 continue;
             }
             system("clear");
@@ -404,11 +378,11 @@ int main(int argc,  char * argv[], char * envp[]) {
                 }
                 else if(field[h-1][v-1]=='.') {
                     field[h-1][v-1]='o';
-                  //  system("mpg123 Turn.wav");
+
                 }
                 else {
                     printf("Fuck you\n");
-                   // system("mpg123 Fuck.wav");
+
                     continue;
                 }
             system("clear");
@@ -428,7 +402,7 @@ int main(int argc,  char * argv[], char * envp[]) {
             if(strcmp(argv[1],"-o")==0) make_turn_1(field);
             if(strcmp(argv[1],"-r")==0) random_strategy_1(field);
             print_field(field);
-           // system("mpg123 Turn.wav");
+
             system("clear");
 
 
@@ -440,7 +414,7 @@ int main(int argc,  char * argv[], char * envp[]) {
             if(strcmp(argv[3],"-o")==0) make_turn_2(field);
             if(strcmp(argv[3],"-r")==0) random_strategy_2(field);
             print_field(field);
-            //system("mpg123 Turn.wav");
+
             system("clear");
 
  
@@ -457,7 +431,7 @@ int main(int argc,  char * argv[], char * envp[]) {
     fclose(log);
     fclose(autosaves);
 
-    //system("mpg123 Gamover.wav");
+
     system("clear");
     
     return 0;
