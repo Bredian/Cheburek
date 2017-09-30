@@ -9,8 +9,8 @@ int make_turn_1(char (* field)[9]){
     if(li==0){
     srand(time(NULL));
         while(k==0){
-            i=(rand()%9);
-            j=(rand()%9);
+            i=(rand()%7)+1;
+            j=(rand()%7)+1;
             if (field[i][j]=='.') {
                 k++;
                 X=i;
@@ -208,8 +208,8 @@ int make_turn_2(char (* field)[9]){
         if(li==0){
             srand(time(NULL));
             while(k==0){
-                i=(rand()%9);
-                j=(rand()%9);
+                i=(rand()%7)+1;
+                j=(rand()%7)+1;
                 if (field[i][j]=='.') {
                     k++;
                     x=i;
