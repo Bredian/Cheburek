@@ -300,7 +300,8 @@ int main(int argc,  char * argv[], char * envp[]) {
     system("clear");
 
 
-    if(strcmp(argv[2],"-1")==0 && answer=='n') make_turn_1(field);
+    if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-o")==0 && answer=='n') make_turn_1(field);
+    if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-t")==0 && answer=='n') strategy_tetric(field);
     if(strcmp(argv[2],"-c")!=0) print_field(field);
     while(check_endgame(field)==0){
         if(strcmp(argv[2],"-m")!=0 && strcmp(argv[2],"-c")!=0){
@@ -328,10 +329,12 @@ int main(int argc,  char * argv[], char * envp[]) {
             if(strcmp(argv[2],"-1")==0){
                 if(strcmp(argv[1],"-o")==0) make_turn_1(field);
                 if(strcmp(argv[1],"-r")==0) random_strategy_1(field);
+                if(strcmp(argv[1],"-t")==0) strategy_tetric(field);
             }
             else if(strcmp(argv[2],"-2")==0){
                 if(strcmp(argv[1],"-o")==0) make_turn_2(field);
                 if(strcmp(argv[1],"-r")==0) random_strategy_2(field);
+                if(strcmp(argv[1],"-t")==0) strategy_tetric(field);
             }
             system("clear");
             print_field(field);
@@ -401,7 +404,10 @@ int main(int argc,  char * argv[], char * envp[]) {
             
             if(strcmp(argv[1],"-o")==0) make_turn_1(field);
             if(strcmp(argv[1],"-r")==0) random_strategy_1(field);
-            print_field(field);
+            if(strcmp(argv[1],"-t")==0){
+                mysymb="-1";
+                strategy_tetric(field);
+            }            print_field(field);
 
             system("clear");
 
@@ -413,11 +419,18 @@ int main(int argc,  char * argv[], char * envp[]) {
             write(fd[1],&end,1);
             if(strcmp(argv[3],"-o")==0) make_turn_2(field);
             if(strcmp(argv[3],"-r")==0) random_strategy_2(field);
+            if(strcmp(argv[3],"-t")==0){
+                mysymb="-2";
+                strategy_tetric(field);
+            }
             print_field(field);
 
             system("clear");
 
- 
+            if(turn==81) fprintf(log,"Turn %d\n",turn);
+            else fprintf(log,"Turn %d - %d\n",turn,turn+1);
+            save_game_log(log,field);
+            turn=turn+2;
             
             autosave(autosaves,field);
             

@@ -14,7 +14,6 @@
 #include <string.h>
 #include <signal.h>
 #include <sys/wait.h>
-
 #include <ctype.h>
 int fl=0;
 int load_game(FILE * save,char (*field)[9]);
@@ -404,6 +403,10 @@ int main(int argc,  char * argv[], char * envp[]) {
             
             if(strcmp(argv[1],"-o")==0) make_turn_1(field);
             if(strcmp(argv[1],"-r")==0) random_strategy_1(field);
+            if(strcmp(argv[1],"-t")==0){
+                mysymb="-1";
+                strategy_tetric(field);
+            }
             print_field(field);
 
             system("clear");
@@ -416,6 +419,10 @@ int main(int argc,  char * argv[], char * envp[]) {
             write(fd[1],&end,1);
             if(strcmp(argv[3],"-o")==0) make_turn_2(field);
             if(strcmp(argv[3],"-r")==0) random_strategy_2(field);
+            if(strcmp(argv[3],"-t")==0){
+                mysymb="-2";
+                strategy_tetric(field);
+            }
             print_field(field);
 
             system("clear");
@@ -423,7 +430,10 @@ int main(int argc,  char * argv[], char * envp[]) {
  
             
             autosave(autosaves,field);
-            
+            if(turn==81) fprintf(log,"Turn %d\n",turn);
+            else fprintf(log,"Turn %d - %d\n",turn,turn+1);
+            save_game_log(log,field);
+            turn=turn+2;
             end = check_endgame(field)+'a';
             write(fd[0],&end,1);
         }

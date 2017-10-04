@@ -16,7 +16,9 @@
 #include <sys/wait.h>
 #include <curses.h>
 #include <ctype.h>
-int fl=0;
+
+int fl;
+
 int load_game(FILE * save,char (*field)[9]);
 int autosave(FILE * save,char (*field)[9]);
 // printing field
@@ -55,7 +57,10 @@ int print_demo(char (*field)[9]){
 }
 //menu
 int menu(FILE *save,char (*field)[9],char * AI,int pid){
-    system("clear");
+    if(system("clear")<0){
+        perror("sys error");
+        exit(1);
+    }
     int answer;
     printf("1 - quit game\n2 - save game\n3 - load game\n4 - credits\n");
 
@@ -103,9 +108,6 @@ int menu(FILE *save,char (*field)[9],char * AI,int pid){
     print_field(field);
     return 0;
 }
-//load menu: select save file
-
-
 
 // saving all turns into file
 int save_game_log(FILE * log,char (*field)[9]){
@@ -206,7 +208,7 @@ int score(FILE * log,char (*field)[9]){
     fprintf(log,"x player: %d\no player: %d\nno one lands: %d\n",score_1,score_2,n);
     return 0;
 }
-
+//Demo game: Object vs Random
 int demo(char (*demo)[9],int status){
     
 
@@ -231,7 +233,7 @@ int demo(char (*demo)[9],int status){
 
 int main(int argc,  char * argv[], char * envp[]) {
     int fd[2];
-
+    mysymb = argv[2];
     int status;
     pipe(fd);
     if(argc==1){
@@ -288,8 +290,8 @@ int main(int argc,  char * argv[], char * envp[]) {
     system("clear");
     
     FILE *autosaves = fopen("autosave.txt", "r+");
-    if (log==NULL) printf("Game save error: file does not exists or created\n");
-    if (log!=NULL) printf("Save is OK\n");
+    if (autosaves==NULL) printf("Game save error: file does not exists or created\n");
+    if (autosaves!=NULL) printf("Save is OK\n");
     printf("Do you want to load your last game  (y/n)?\n");
     scanf("%c",&answer);
     if(answer=='y' || answer=='Y') {
@@ -322,8 +324,8 @@ int main(int argc,  char * argv[], char * envp[]) {
 
     }
     if(pid>0){
-    if(strcmp(argv[2],"-1")==0 && answer=='n') make_turn_1(field);
-    if(strcmp(argv[2],"-c")!=0) print_field(field);
+    if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-o")==0 && answer=='n') make_turn_1(field);
+    if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-t")==0 && answer=='n') strategy_tetric(field);
     while(check_endgame(field)==0){
         if(strcmp(argv[2],"-m")!=0 && strcmp(argv[2],"-c")!=0){
             scanf("%d%d",&h,&v);
@@ -350,10 +352,12 @@ int main(int argc,  char * argv[], char * envp[]) {
             if(strcmp(argv[2],"-1")==0){
                 if(strcmp(argv[1],"-o")==0) make_turn_1(field);
                 if(strcmp(argv[1],"-r")==0) random_strategy_1(field);
+                if(strcmp(argv[1],"-t")==0) strategy_tetric(field);
             }
             else if(strcmp(argv[2],"-2")==0){
                 if(strcmp(argv[1],"-o")==0) make_turn_2(field);
                 if(strcmp(argv[1],"-r")==0) random_strategy_2(field);
+                if(strcmp(argv[1],"-t")==0) strategy_tetric(field);;
             }
             system("clear");
             print_field(field);
@@ -401,19 +405,18 @@ int main(int argc,  char * argv[], char * envp[]) {
                     field[h-1][v-1]='x';
                     system("afplay Turn.wav");
             }
-            else {
+            else if(field[h-1][v-1]!='.'){
                 printf("Fuck you\n");
                 system("afplay Fuck.wav");
+               
                 continue;
             }
             system("clear");
             print_field(field);
-            if(turn==81) fprintf(log,"Turn %d\n",turn);
-            else fprintf(log,"Turn %d - %d\n",turn,turn+1);
-            save_game_log(log,field);
             
             turn=turn+2;
             autosave(autosaves,field);
+            
             if(waitpid(pid,&status,WNOHANG)==pid){
                 int pin =fork();
                 if(pin==0){
@@ -439,8 +442,6 @@ int main(int argc,  char * argv[], char * envp[]) {
                     pid=pin;
                 }
             }
-            char end = check_endgame(field)+'a';
-            write(fd[1],&end,1);
                 scanf("%d%d",&h,&v);
                 if(h==0 || v==0) {
                     menu(autosaves,field,argv[1],pid);
@@ -450,17 +451,21 @@ int main(int argc,  char * argv[], char * envp[]) {
                     field[h-1][v-1]='o';
                     system("afplay Turn.wav");
                 }
-                else {
-                    printf("Fuck you\n");
-                    system("afplay Fuck.wav");
-                    continue;
+                else if(field[h-1][v-1]!='.'){
+                    while(field[h-1][v-1]!='.'){
+                        printf("Fuck you\n");
+                        system("afplay Fuck.wav");
+                        scanf("%d%d",&h,&v);
+                    }
+                    field[h-1][v-1]='o';
+                    system("afplay Turn.wav");
                 }
             system("clear");
             print_field(field);
+
             if(turn==81) fprintf(log,"Turn %d\n",turn);
             else fprintf(log,"Turn %d - %d\n",turn,turn+1);
             save_game_log(log,field);
-                
             turn=turn+2;
             autosave(autosaves,field);
             if(waitpid(pid,&status,WNOHANG)==pid){
@@ -488,13 +493,15 @@ int main(int argc,  char * argv[], char * envp[]) {
                     pid=pin;
                 }
             }
-            end = check_endgame(field)+'a';
-            write(fd[1],&end,1);
         }
         else if(strcmp(argv[2],"-c")==0){
             
             if(strcmp(argv[1],"-o")==0) make_turn_1(field);
             if(strcmp(argv[1],"-r")==0) random_strategy_1(field);
+            if(strcmp(argv[1],"-t")==0){
+                mysymb="-1";
+                strategy_tetric(field);
+            }
             print_field(field);
             system("afplay Turn.wav");
             system("clear");
@@ -531,13 +538,19 @@ int main(int argc,  char * argv[], char * envp[]) {
             write(fd[1],&end,1);
             if(strcmp(argv[3],"-o")==0) make_turn_2(field);
             if(strcmp(argv[3],"-r")==0) random_strategy_2(field);
+            if(strcmp(argv[3],"-t")==0){
+                mysymb="-2";
+                strategy_tetric(field);
+            }
             print_field(field);
             system("afplay Turn.wav");
             system("clear");
-
- 
-            
             autosave(autosaves,field);
+            
+            if(turn==81) fprintf(log,"Turn %d\n",turn);
+            else fprintf(log,"Turn %d - %d\n",turn,turn+1);
+            save_game_log(log,field);
+            turn=turn+2;
             if(waitpid(pid,&status,WNOHANG)==pid){
                 int pin =fork();
                 if(pin==0){
@@ -563,10 +576,8 @@ int main(int argc,  char * argv[], char * envp[]) {
                     pid=pin;
                 }
             }
-            end = check_endgame(field)+'a';
-            write(fd[0],&end,1);
+
         }
-        
     }
     score(log, field);
     fclose(log);

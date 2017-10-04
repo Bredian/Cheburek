@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "ai.h"
+#include <string.h>
 int x,y,li=0,ni=0,X,Y;
 int make_turn_1(char (* field)[9]){
     int i,j,k=0;
@@ -417,4 +418,142 @@ int check_endgame(char (*field)[9]){
         
         return 1;
     }
+}
+//new function
+char symb()
+{
+    if(strcmp(mysymb,"-1") == 0)
+        return 'x';
+    if(strcmp(mysymb, "-2") == 0)
+        return 'o';
+    return 'f';
+}
+
+int strategy_tetric(char (* field)[9]) //determine the situation
+{
+    int i, j, i_max = 0, j_max = 0;
+    update_field(field);
+    for (i = 0; i < 9; i++)
+        for (j = 0; j < 9; j++)
+            if (int_field[i][j] > int_field[i_max][j_max])
+            {
+                i_max = i;
+                j_max = j;
+            }
+    if (int_field[i_max][j_max] > -1)
+        field[i_max][j_max] = symb();
+    return 0;
+}
+
+
+void update_field(char (*field)[9])
+{
+    int i, j;
+    for (i = 0; i < 9; i++)
+        for (j = 0; j < 9; j++)
+        {
+            if(field[i][j] == 'x' || field[i][j] == 'o')
+                {
+                    int_field[i][j] = -1;
+                    continue;
+                }
+            if (field[i][j] == '.')
+                {
+                    if (i % 2 == 1 && j % 2 == 1)
+                            int_field[i][j] = int_field[i][j] + 7;
+
+                    int_field[i][j] = int_field[i][j] + analyze_cells (field, i, j);
+                    continue;
+                }
+        }
+    return;
+}
+
+int analyze_cells (char (*field)[9], int i, int j)
+{
+    int sum = 0, num_x = 0, num_o = 0;
+    if (i - 1 > -1)
+    {
+        if (j - 1 > -1)
+        {
+            if (field [i-1][j-1] == 'x') num_x++;
+            if (field [i][j-1] == 'x') num_x++;
+            if (field [i-1][j] == 'x') num_x++;
+            if (field [i][j] == 'x') num_x++;
+            if (field [i-1][j-1] == 'o') num_o++;
+            if (field [i][j-1] == 'o') num_o++;
+            if (field [i-1][j] == 'o') num_o++;
+            if (field [i][j] == 'o') num_o++;
+            sum = sum + func (num_x, num_o);
+            num_x = 0;
+            num_o = 0;
+        }
+        if (j + 1 < 9)
+        {
+            if (field [i-1][j+1] == 'x') num_x++;
+            if (field [i][j+1] == 'x') num_x++;
+            if (field [i-1][j] == 'x') num_x++;
+            if (field [i][j] == 'x') num_x++;
+            if (field [i-1][j+1] == 'o') num_o++;
+            if (field [i][j+1] == 'o') num_o++;
+            if (field [i-1][j] == 'o') num_o++;
+            if (field [i][j] == 'o') num_o++;
+            sum = sum + func (num_x, num_o);
+            num_x = 0;
+            num_o = 0;
+        }
+    }
+    if (i + 1 < 9)
+    {
+        if (j - 1 > -1)
+        {
+            if (field [i+1][j-1] == 'x') num_x++;
+            if (field [i][j-1] == 'x') num_x++;
+            if (field [i+1][j] == 'x') num_x++;
+            if (field [i][j] == 'x') num_x++;
+            if (field [i+1][j-1] == 'o') num_o++;
+            if (field [i][j-1] == 'o') num_o++;
+            if (field [i+1][j] == 'o') num_o++;
+            if (field [i][j] == 'o') num_o++;
+            sum = sum + func (num_x, num_o);
+            num_x = 0;
+            num_o = 0;
+        }
+        if (j + 1 < 9)
+        {
+            if (field [i+1][j+1] == 'x') num_x++;
+            if (field [i][j+1] == 'x') num_x++;
+            if (field [i+1][j] == 'x') num_x++;
+            if (field [i][j] == 'x') num_x++;
+            if (field [i+1][j+1] == 'o') num_o++;
+            if (field [i][j+1] == 'o') num_o++;
+            if (field [i-1][j] == 'o') num_o++;
+            if (field [i][j] == 'o') num_o++;
+            sum = sum + func (num_x, num_o);
+            num_x = 0;
+            num_o = 0;
+        }
+    }
+    return sum;
+}
+
+int func (int i, int j)
+{
+    if (i == 0 && j == 0)
+        return 2;
+    if (i == 0 && j == 1)
+        return 2;
+    if (i == 0 && j == 2)
+        return 1;
+    if (i == 1 && j == 0)
+        return 3;
+    if (i == 1 && j == 1)
+        return 4;
+    if (i == 1 && j == 2)
+        return 2;
+    if (i == 2 && j == 0)
+        return 5;
+    if (i == 2 && j == 1)
+        return 6;
+    return 0;
 }
