@@ -326,6 +326,7 @@ int main(int argc,  char * argv[], char * envp[]) {
     if(pid>0){
     if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-o")==0 && answer=='n') make_turn_1(field);
     if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-t")==0 && answer=='n') strategy_tetric(field);
+    if(strcmp(argv[2],"-c")!=0) print_field(field);
     while(check_endgame(field)==0){
         if(strcmp(argv[2],"-m")!=0 && strcmp(argv[2],"-c")!=0){
             scanf("%d%d",&h,&v);
