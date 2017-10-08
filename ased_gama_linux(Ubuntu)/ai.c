@@ -24,101 +24,122 @@ int make_turn_1(char (* field)[9]){
     if(star_check_1(field,X,Y)==1 && field[X][Y]=='.') {
         field[X][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y+1);
         return 0;
     }
     else if(semistar_check_1(field,X,Y)==1 && field[X][Y]=='.') {
         field[X][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y+1);
         return 0;
     }
     else if(triangle_check_1(field,X,Y)==1 && field[X][Y]=='.') {
         field[X][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y+1);
         return 0;
     }
     else if(star_check_1(field,X,Y)==1 && field[X+1][Y]=='.') {
         field[X+1][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+2,Y+1);
         return 0;
     }
     else if(star_check_1(field,X,Y)==1 && field[X-1][Y]=='.') {
         field[X-1][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X-1+1,Y+1);
         return 0;
     }
     else if(star_check_1(field,X,Y)==1 && field[X][Y+1]=='.'){
         field[X][Y+1]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y+1+1);
         return 0;
     }
     else if(star_check_1(field,X,Y)==1 && field[X][Y-1]=='.'){
         field[X][Y-1]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y-1+1);
         return 0;
     }
     else if(semistar_check_1(field,X,Y)==1 && field[X+1][Y]=='.') {
         field[X+1][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1+1,Y+1);
         return 0;
     }
     else if(semistar_check_1(field,X,Y)==1 && field[X-1][Y]=='.') {
         field[X-1][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X-1+1,Y+1);
         return 0;
     }
     else if(semistar_check_1(field,X,Y)==1 && field[X][Y+1]=='.'){
         field[X][Y+1]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y+1+1);
         return 0;
     }
     else if(semistar_check_1(field,X,Y)==1 && field[X][Y-1]=='.'){
         field[X][Y-1]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y-1+1);
         return 0;
     }
     if(triangle_check_1(field,X,Y)==1 && field[X+1][Y]=='.'){
         field[X+1][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1+1,Y+1);
         return 0;
     }
     else if(triangle_check_1(field,X,Y)==1 && field[X-1][Y]=='.') {
         field[X-1][Y]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X-1+1,Y+1);
         return 0;
     }
     else if(triangle_check_1(field,X,Y)==1 && field[X][Y+1]=='.'){
         field[X][Y+1]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y+1+1);
         return 0;
     }
     else if(triangle_check_1(field,X,Y)==1 && field[X][Y-1]=='.') {
         field[X][Y-1]='x';
         ni++;
+        printf("Last computer turn: %d %d\n",X+1,Y-1+1);
         return 0;
     }
 
     else if(ni==0 && neutral_check_1(field,X,Y)==1 && field[X+1][Y]=='.') {
         field[X+1][Y]='x';
+        printf("Last computer turn: %d %d\n",X+1+1,Y+1);
         return 0;
     }
     else if(ni==0 && neutral_check_1(field,X,Y)==1 && field[X-1][Y]=='.'){
         field[X-1][Y]='x';
+        printf("Last computer turn: %d %d\n",X-1+1,Y+1);
         return 0;
     }
     else if(ni==0 && neutral_check_1(field,X,Y)==1 && field[X][Y+1]=='.') {
         field[X][Y+1]='x';
+        printf("Last computer turn: %d %d\n",X+1,Y+1+1);
         return 0;
     }
     else if(ni==0 && neutral_check_1(field,X,Y)==1 && field[X][Y-1]=='.') {
         field[X][Y-1]='x';
+        printf("Last computer turn: %d %d\n",X+1,Y-1+1);
         return 0;
     }
     else if(ni==0 && neutral_check_1(field,X,Y)==1 && field[X+1][Y+1]=='.') {
         field[X+1][Y+1]='x';
+        printf("Last computer turn: %d %d\n",X+1+1,Y+1+1);
         return 0;
     }
     else if(ni==0 && neutral_check_1(field,X,Y)==1 && field[X-1][Y-1]=='.') {
         field[X-1][Y-1]='x';
+        printf("Last computer turn: %d %d\n",X-1+1,Y-1+1);
         return 0;
     }
     while (k<=81){
@@ -180,6 +201,7 @@ int make_turn_1(char (* field)[9]){
     }
     ni=0;
     }
+    printf("Last computer turn: %d %d\n", i+1 , j+1);
     return 0;
     
 }
@@ -223,101 +245,122 @@ int make_turn_2(char (* field)[9]){
         if(star_check_2(field,x,y)==1 && field[x][y]=='.') {
             field[x][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1);
             return 0;
         }
         else if(semistar_check_2(field,x,y)==1 && field[x][y]=='.') {
             field[x][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1);
             return 0;
         }
         else if(triangle_check_2(field,x,y)==1 && field[x][y]=='.') {
             field[x][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1);
             return 0;
         }
         else if(star_check_2(field,x,y)==1 && field[x+1][y]=='.') {
             field[x+1][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1+1,y+1);
             return 0;
         }
         else if(star_check_2(field,x,y)==1 && field[x-1][y]=='.') {
             field[x-1][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1-1,y+1);
             return 0;
         }
         else if(star_check_2(field,x,y)==1 && field[x][y+1]=='.'){
             field[x][y+1]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1+1);
             return 0;
         }
         else if(star_check_2(field,x,y)==1 && field[x][y-1]=='.'){
             field[x][y-1]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1-1);
             return 0;
         }
         else if(semistar_check_2(field,x,y)==1 && field[x+1][y]=='.') {
             field[x+1][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1+1,y+1);
             return 0;
         }
         else if(semistar_check_2(field,x,y)==1 && field[x-1][y]=='.') {
             field[x-1][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1-1,y+1);
             return 0;
         }
         else if(semistar_check_2(field,x,y)==1 && field[x][y+1]=='.'){
             field[x][y+1]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1+1);
             return 0;
         }
         else if(semistar_check_2(field,x,y)==1 && field[x][y-1]=='.'){
             field[x][y-1]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1-1);
             return 0;
         }
         if(triangle_check_2(field,x,y)==1 && field[x+1][y]=='.'){
             field[x+1][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1+1,y+1);
             return 0;
         }
         else if(triangle_check_2(field,x,y)==1 && field[x-1][y]=='.') {
             field[x-1][y]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1-1,y+1);
             return 0;
         }
         else if(triangle_check_2(field,x,y)==1 && field[x][y+1]=='.'){
             field[x][y+1]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1+1);
             return 0;
         }
         else if(triangle_check_2(field,x,y)==1 && field[x][y-1]=='.') {
             field[x][y-1]='o';
             ni++;
+            printf("Last computer turn: %d %d\n",x+1,y+1-1);
             return 0;
         }
         
         else if(ni==0 && neutral_check_2(field,x,y)==1 && field[x+1][y]=='.') {
             field[x+1][y]='o';
+            printf("Last computer turn: %d %d\n",x+1+1,y+1);
             return 0;
         }
         else if(ni==0 && neutral_check_2(field,x,y)==1 && field[x-1][y]=='.'){
             field[x-1][y]='o';
+            printf("Last computer turn: %d %d\n",x+1-1,y+1);
             return 0;
         }
         else if(ni==0 && neutral_check_2(field,x,y)==1 && field[x][y+1]=='.') {
             field[x][y+1]='o';
+            printf("Last computer turn: %d %d\n",x+1,y+1+1);
             return 0;
         }
         else if(ni==0 && neutral_check_2(field,x,y)==1 && field[x][y-1]=='.') {
             field[x][y-1]='o';
+            printf("Last computer turn: %d %d\n",x+1,y+1-1);
             return 0;
         }
         else if(ni==0 && neutral_check_2(field,x,y)==1 && field[x+1][y+1]=='.') {
             field[x+1][y+1]='o';
+            printf("Last computer turn: %d %d\n",x+1+1,y+1+1);
             return 0;
         }
         else if(ni==0 && neutral_check_2(field,x,y)==1 && field[x-1][y-1]=='.') {
             field[x-1][y-1]='o';
+            printf("Last computer turn: %d %d\n",x+1-1,y+1-1);
             return 0;
         }
         while (k<=81){
@@ -379,6 +422,7 @@ int make_turn_2(char (* field)[9]){
         }
         ni=0;
     }
+    printf("Last computer turn: %d %d\n",i+1,j+1);
     return 0;
     
 }
@@ -442,6 +486,7 @@ int strategy_tetric(char (* field)[9]) //determine the situation
             }
     if (int_field[i_max][j_max] > -1)
         field[i_max][j_max] = symb();
+    printf("Last computer turn: %d %d\n",i_max+1,j_max+1);
     return 0;
 }
 

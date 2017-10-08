@@ -165,6 +165,7 @@ int random_strategy_2(char (*field)[9]){
         }
         else continue;
     }
+    printf("Last computer turn: %d %d\n",i+1,j+1);
     return 0;
 }
 
@@ -180,6 +181,7 @@ int random_strategy_1(char (*field)[9]){
         }
         else continue;
     }
+    printf("Last computer turn: %d %d\n",i+1,j+1);
     return 0;
 }
 // Score counting
@@ -324,6 +326,7 @@ int main(int argc,  char * argv[], char * envp[]) {
 
     }
     if(pid>0){
+    if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-r")==0 && answer=='n') random_strategy_1(field);
     if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-o")==0 && answer=='n') make_turn_1(field);
     if(strcmp(argv[2],"-1")==0 && strcmp(argv[1], "-t")==0 && answer=='n') strategy_tetric(field);
     if(strcmp(argv[2],"-c")!=0) print_field(field);
@@ -350,6 +353,7 @@ int main(int argc,  char * argv[], char * envp[]) {
                 system("afplay Fuck.wav");
                 continue;
             }
+            system("clear");
             if(strcmp(argv[2],"-1")==0){
                 if(strcmp(argv[1],"-o")==0) make_turn_1(field);
                 if(strcmp(argv[1],"-r")==0) random_strategy_1(field);
@@ -360,7 +364,7 @@ int main(int argc,  char * argv[], char * envp[]) {
                 if(strcmp(argv[1],"-r")==0) random_strategy_2(field);
                 if(strcmp(argv[1],"-t")==0) strategy_tetric(field);;
             }
-            system("clear");
+            
             print_field(field);
             if(turn==81) fprintf(log,"Turn %d\n",turn);
             else fprintf(log,"Turn %d - %d\n",turn,turn+1);
@@ -496,7 +500,7 @@ int main(int argc,  char * argv[], char * envp[]) {
             }
         }
         else if(strcmp(argv[2],"-c")==0){
-            
+            system("clear");
             if(strcmp(argv[1],"-o")==0) make_turn_1(field);
             if(strcmp(argv[1],"-r")==0) random_strategy_1(field);
             if(strcmp(argv[1],"-t")==0){
@@ -505,7 +509,7 @@ int main(int argc,  char * argv[], char * envp[]) {
             }
             print_field(field);
             system("afplay Turn.wav");
-            system("clear");
+            
 
 
             
@@ -537,6 +541,7 @@ int main(int argc,  char * argv[], char * envp[]) {
             }
             char end = check_endgame(field)+'a';
             write(fd[1],&end,1);
+            system("clear");
             if(strcmp(argv[3],"-o")==0) make_turn_2(field);
             if(strcmp(argv[3],"-r")==0) random_strategy_2(field);
             if(strcmp(argv[3],"-t")==0){
@@ -545,7 +550,7 @@ int main(int argc,  char * argv[], char * envp[]) {
             }
             print_field(field);
             system("afplay Turn.wav");
-            system("clear");
+            
             autosave(autosaves,field);
             
             if(turn==81) fprintf(log,"Turn %d\n",turn);
