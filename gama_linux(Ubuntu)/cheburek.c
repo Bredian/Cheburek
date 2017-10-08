@@ -236,7 +236,7 @@ int demo(char (*demo)[9],int status){
 
 int main(int argc,  char * argv[], char * envp[]) {
     int fd[2];
-
+    mysimb=argv[2];
     int status;
     pipe(fd);
     if(argc==1){
