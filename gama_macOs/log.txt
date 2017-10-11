@@ -1,7 +1,7 @@
 Turn 1 - 2
   1 2 3 4 5 6 7 8 9
-1 o . . . . . . . x 
-2 . . . . . . . . . 
+1 x . . . . . . . . 
+2 . o . . . . . . . 
 3 . . . . . . . . . 
 4 . . . . . . . . . 
 5 . . . . . . . . . 
@@ -11,445 +11,445 @@ Turn 1 - 2
 9 . . . . . . . . . 
 Turn 3 - 4
   1 2 3 4 5 6 7 8 9
-1 o . . . . . . . x 
-2 . o . . . . . . . 
+1 x x . . . . . . . 
+2 . o . o . . . . . 
 3 . . . . . . . . . 
 4 . . . . . . . . . 
 5 . . . . . . . . . 
 6 . . . . . . . . . 
 7 . . . . . . . . . 
-8 . . . . . . . . x 
+8 . . . . . . . . . 
 9 . . . . . . . . . 
 Turn 5 - 6
   1 2 3 4 5 6 7 8 9
-1 o o o . . . . . . 
-2 . x . . . . . . . 
+1 x x . . . . . . . 
+2 x o . o . o . . . 
 3 . . . . . . . . . 
 4 . . . . . . . . . 
-5 . . . . . . . . . 
-6 . . . . . . . . . 
-7 . . . . x . . . . 
-8 . . . . . . . . . 
-9 . . x . . . . . . 
-Turn 7 - 8
-  1 2 3 4 5 6 7 8 9
-1 o o o o . . . . . 
-2 . x . . . . . . . 
-3 . . . . . . . . . 
-4 . . . . . . . . . 
-5 . . . . . . . . . 
-6 . . . . . . . . . 
-7 . . . . x . . . . 
-8 . . . . . . . . . 
-9 . . x . . . x . . 
-Turn 9 - 10
-  1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x . . . . . . 
 5 . . . . . . . . . 
 6 . . . . . . . . . 
 7 . . . . . . . . . 
-8 . x . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
+Turn 7 - 8
+  1 2 3 4 5 6 7 8 9
+1 x x . . . . . . . 
+2 x o . o . o . . . 
+3 x . . . . . . . . 
+4 . o . . . . . . . 
+5 . . . . . . . . . 
+6 . . . . . . . . . 
+7 . . . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
+Turn 9 - 10
+  1 2 3 4 5 6 7 8 9
+1 x x . . . . . . . 
+2 x o . o . o . o . 
+3 x x . . . . . . . 
+4 . o . . . . . . . 
+5 . . . . . . . . . 
+6 . . . . . . . . . 
+7 . . . . . . . . . 
+8 . . . . . . . . . 
 9 . . . . . . . . . 
 Turn 11 - 12
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o . . . . . 
+1 x x . . . . . . . 
+2 x o x o . o . o . 
+3 x x . . . . . . . 
+4 . o . o . . . . . 
 5 . . . . . . . . . 
 6 . . . . . . . . . 
 7 . . . . . . . . . 
-8 . x . . . . . . . 
-9 . x . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
 Turn 13 - 14
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o . o . . . 
+1 x x x . . . . . . 
+2 x o x o . o . o . 
+3 x x . . . . . . . 
+4 . o . o . o . . . 
 5 . . . . . . . . . 
 6 . . . . . . . . . 
-7 . x . . . . . . . 
-8 . x . . . . . . . 
-9 . x . . . . . . . 
+7 . . . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
 Turn 15 - 16
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o . o . o . 
+1 x x x . . . . . . 
+2 x o x o . o . o . 
+3 x x x . . . . . . 
+4 . o . o . o . o . 
 5 . . . . . . . . . 
 6 . . . . . . . . . 
-7 . x . . . . . . . 
-8 . x x . . . . . . 
-9 . x . . . . . . . 
+7 . . . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
 Turn 17 - 18
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o . o . o . 
+1 x x x . . . . . . 
+2 x o x o . o . o . 
+3 x x x . . . . . . 
+4 x o . o . o . o . 
 5 . . . . . . . . . 
 6 . o . . . . . . . 
-7 . x . . . . . . . 
-8 x x x . . . . . . 
-9 . x . . . . . . . 
+7 . . . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
 Turn 19 - 20
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o . o . o . 
-5 . . . . x . . . . 
+1 x x x . . . . . . 
+2 x o x o . o . o . 
+3 x x x . . . . . . 
+4 x o x o . o . o . 
+5 . . . . . . . . . 
 6 . o . o . . . . . 
-7 . x . . . . . . . 
-8 x x x . . . . . . 
-9 . x . . . . . . . 
+7 . . . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
 Turn 21 - 22
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o . o . o . 
-5 . . . . x . . . . 
-6 . o . o x o . . . 
-7 . x . . . . . . . 
-8 x x x . . . . . . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o . o . o . 
+3 x x x . . . . . . 
+4 x o x o . o . o . 
+5 . . . . . . . . . 
+6 . o . o . o . . . 
+7 . . . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
 Turn 23 - 24
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o x o . o . 
-5 . . . . x . . . . 
-6 . o . o x o . o . 
-7 . x . . . . . . . 
-8 x x x . . . . . . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o . o . o . 
+3 x x x x . . . . . 
+4 x o x o . o . o . 
+5 . . . . . . . . . 
+6 . o . o . o . o . 
+7 . . . . . . . . . 
+8 . . . . . . . . . 
+9 . . . . . . . . . 
 Turn 25 - 26
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o x o . o . 
-5 . . . . x x . . . 
-6 . o . o x o . o . 
-7 . x . . . . . . . 
-8 x x x o . . . . . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o . o . o . 
+3 x x x x . . . . . 
+4 x o x o . o . o . 
+5 . x . . . . . . . 
+6 . o . o . o . o . 
+7 . . . . . . . . . 
+8 . o . . . . . . . 
+9 . . . . . . . . . 
 Turn 27 - 28
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o x o . o . 
-5 . . . x x x . . . 
-6 . o . o x o . o . 
-7 . x . . . . . . . 
-8 x x x o . o . . . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o . o . o . 
+3 x x x x . . . . . 
+4 x o x o . o . o . 
+5 . x . . . x . . . 
+6 . o . o . o . o . 
+7 . . . . . . . . . 
+8 . o . o . . . . . 
+9 . . . . . . . . . 
 Turn 29 - 30
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o x o . o . 
-5 . . x x x x . . . 
-6 . o . o x o . o . 
-7 . x . . . . . . . 
-8 x x x o . o . o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o . o . o . 
+3 x x x x . . . . . 
+4 x o x o . o . o . 
+5 . x x . . x . . . 
+6 . o . o . o . o . 
+7 . . . . . . . . . 
+8 . o . o . o . . . 
+9 . . . . . . . . . 
 Turn 31 - 32
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x . . . . . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o . o . 
-7 . x . . . . . . . 
-8 x x x o . o . o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o . o . o . 
+3 x x x x . . . . . 
+4 x o x o . o . o . 
+5 . x x x . x . . . 
+6 . o . o . o . o . 
+7 . . . . . . . . . 
+8 . o . o . o . o . 
+9 . . . . . . . . . 
 Turn 33 - 34
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o . o . o . 
-3 . x x x x . . . . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o . o . 
-7 . x o . . . . . . 
-8 x x x o . o . o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x . . . . . 
+4 x o x o . o . o . 
+5 . x x x . x . . . 
+6 . o x o . o . o . 
+7 . . . . . . . . . 
+8 . o . o . o . o . 
+9 . . . . . . . . . 
 Turn 35 - 36
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o o o . o . 
-3 . x x x x x . . . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o . o . 
-7 . x o . . . . . . 
-8 x x x o . o . o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x . . . . . 
+4 x o x o . o . o . 
+5 x x x x o x . . . 
+6 . o x o . o . o . 
+7 . . . . . . . . . 
+8 . o . o . o . o . 
+9 . . . . . . . . . 
 Turn 37 - 38
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o . o . 
-7 . x o . x . . . . 
-8 x x x o . o . o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x . . . . . 
+4 x o x o o o . o . 
+5 x x x x o x . . . 
+6 x o x o . o . o . 
+7 . . . . . . . . . 
+8 . o . o . o . o . 
+9 . . . . . . . . . 
 Turn 39 - 40
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o . o . 
-7 . x o . x x . . . 
-8 x x x o o o . o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x . . . . . 
+4 x o x o o o . o . 
+5 x x x x o x o . . 
+6 x o x o . o . o . 
+7 . x . . . . . . . 
+8 . o . o . o . o . 
+9 . . . . . . . . . 
 Turn 41 - 42
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o . o . 
-7 . x o o x x x . . 
-8 x x x o o o . o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x o . . . . 
+4 x o x o o o . o . 
+5 x x x x o x o . . 
+6 x o x o . o . o . 
+7 . x x . . . . . . 
+8 . o . o . o . o . 
+9 . . . . . . . . . 
 Turn 43 - 44
   1 2 3 4 5 6 7 8 9
-1 . . . . . . . . . 
-2 . o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o o o . 
-7 . x o o x x x . . 
-8 x x x o o o x o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x o . . . . 
+4 x o x o o o . o . 
+5 x x x x o x o . . 
+6 x o x o . o . o . 
+7 . x x o . . . . . 
+8 . o x o . o . o . 
+9 . . . . . . . . . 
 Turn 45 - 46
   1 2 3 4 5 6 7 8 9
-1 . x . . . . . . . 
-2 . o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o o o . 
-7 . x o o x x x o . 
-8 x x x o o o x o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x o . . . . 
+4 x o x o o o o o . 
+5 x x x x o x o . . 
+6 x o x o . o . o . 
+7 x x x o . . . . . 
+8 . o x o . o . o . 
+9 . . . . . . . . . 
 Turn 47 - 48
   1 2 3 4 5 6 7 8 9
-1 . x x . . . . . . 
-2 o o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o o o . 
-7 . x o o x x x o . 
-8 x x x o o o x o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x o . . . . 
+4 x o x o o o o o . 
+5 x x x x o x o . . 
+6 x o x o o o . o . 
+7 x x x o . . . . . 
+8 x o x o . o . o . 
+9 . . . . . . . . . 
 Turn 49 - 50
   1 2 3 4 5 6 7 8 9
-1 o x x . . . . . . 
-2 o o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o . o . 
-5 . x x x x x . . . 
-6 . o o o x o o o . 
-7 x x o o x x x o . 
-8 x x x o o o x o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x o . . . . 
+4 x o x o o o o o . 
+5 x x x x o x o . . 
+6 x o x o o o o o . 
+7 x x x o . . . . . 
+8 x o x o . o . o . 
+9 . . . . x . . . . 
 Turn 51 - 52
   1 2 3 4 5 6 7 8 9
-1 o x x . . . . . . 
-2 o o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o . o . 
-5 . x x x x x o . . 
-6 x o o o x o o o . 
-7 x x o o x x x o . 
-8 x x x o o o x o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o . o . 
+3 x x x x o . . . . 
+4 x o x o o o o o . 
+5 x x x x o x o . . 
+6 x o x o o o o o . 
+7 x x x o . . . . . 
+8 x o x o o o . o . 
+9 . . . x x . . . . 
 Turn 53 - 54
   1 2 3 4 5 6 7 8 9
-1 o x x . . . . . . 
-2 o o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o o o . 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o . 
-8 x x x o o o x o . 
-9 . x . . . . . . . 
+1 x x x x . . . . . 
+2 x o x o o o o o . 
+3 x x x x o . . . . 
+4 x o x o o o o o . 
+5 x x x x o x o . . 
+6 x o x o o o o o . 
+7 x x x o . . . . . 
+8 x o x o o o . o . 
+9 . . x x x . . . . 
 Turn 55 - 56
   1 2 3 4 5 6 7 8 9
-1 o x x . . . . . . 
-2 o o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o o o . 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . . x . . . . 
+1 x x x x . . . . . 
+2 x o x o o o o o . 
+3 x x x x o . . . . 
+4 x o x o o o o o . 
+5 x x x x o x o . . 
+6 x o x o o o o o . 
+7 x x x o . . . . . 
+8 x o x o o o o o . 
+9 . x x x x . . . . 
 Turn 57 - 58
   1 2 3 4 5 6 7 8 9
-1 o x x . . . . . . 
-2 o o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o o o . 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o . . . 
+1 x x x x . . . . . 
+2 x o x o o o o o . 
+3 x x x x o . . . . 
+4 x o x o o o o o . 
+5 x x x x o x o . . 
+6 x o x o o o o o . 
+7 x x x o . . . o . 
+8 x o x o o o o o . 
+9 x x x x x . . . . 
 Turn 59 - 60
   1 2 3 4 5 6 7 8 9
-1 o x x . . . . x . 
-2 o o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o o o . 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o o . . 
+1 x x x x . . . . . 
+2 x o x o o o o o . 
+3 x x x x o . . o . 
+4 x o x o o o o o . 
+5 x x x x o x o . . 
+6 x o x o o o o o x 
+7 x x x o . . . o . 
+8 x o x o o o o o . 
+9 x x x x x . . . . 
 Turn 61 - 62
   1 2 3 4 5 6 7 8 9
-1 o x x . . . . x x 
-2 o o x o o o . o . 
-3 . x x x x x . o . 
-4 . o x o x o o o . 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o o o . 
+1 x x x x . . . . . 
+2 x o x o o o o o . 
+3 x x x x o . . o . 
+4 x o x o o o o o . 
+5 x x x x o x o x . 
+6 x o x o o o o o x 
+7 x x x o . o . o . 
+8 x o x o o o o o . 
+9 x x x x x . . . . 
 Turn 63 - 64
   1 2 3 4 5 6 7 8 9
-1 o x x . . . x x x 
-2 o o x o o o o o . 
-3 . x x x x x . o . 
-4 . o x o x o o o . 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o o o . 
+1 x x x x . . . . . 
+2 x o x o o o o o . 
+3 x x x x o . o o . 
+4 x o x o o o o o . 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o . o . o . 
+8 x o x o o o o o . 
+9 x x x x x . . . . 
 Turn 65 - 66
   1 2 3 4 5 6 7 8 9
-1 o x x . . o x x x 
-2 o o x o o o o o x 
-3 . x x x x x . o . 
-4 . o x o x o o o . 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o o o . 
+1 x x x x . . . . . 
+2 x o x o o o o o . 
+3 x x x x o . o o . 
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o . o o o . 
+8 x o x o o o o o . 
+9 x x x x x . . . . 
 Turn 67 - 68
   1 2 3 4 5 6 7 8 9
-1 o x x o . o x x x 
-2 o o x o o o o o x 
-3 . x x x x x . o x 
-4 . o x o x o o o . 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o o o . 
+1 x x x x . . . . x 
+2 x o x o o o o o . 
+3 x x x x o . o o . 
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o o o o o . 
+8 x o x o o o o o . 
+9 x x x x x . . . . 
 Turn 69 - 70
   1 2 3 4 5 6 7 8 9
-1 o x x o . o x x x 
-2 o o x o o o o o x 
-3 x x x x x x . o x 
-4 . o x o x o o o o 
-5 . x x x x x o . . 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o o o . 
+1 x x x x . . . . x 
+2 x o x o o o o o x 
+3 x x x x o o o o . 
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o o o o o . 
+8 x o x o o o o o . 
+9 x x x x x . . . . 
 Turn 71 - 72
   1 2 3 4 5 6 7 8 9
-1 o x x o . o x x x 
-2 o o x o o o o o x 
-3 x x x x x x . o x 
-4 o o x o x o o o o 
-5 . x x x x x o . x 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o o o . 
+1 x x x x o . . x x 
+2 x o x o o o o o x 
+3 x x x x o o o o . 
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o o o o o . 
+8 x o x o o o o o . 
+9 x x x x x . . . . 
 Turn 73 - 74
   1 2 3 4 5 6 7 8 9
-1 o x x o . o x x x 
-2 o o x o o o o o x 
-3 x x x x x x . o x 
-4 o o x o x o o o o 
-5 o x x x x x o x x 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x . x x o o o . 
+1 x x x x o . . x x 
+2 x o x o o o o o x 
+3 x x x x o o o o . 
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o o o o o . 
+8 x o x o o o o o . 
+9 x x x x x o . . x 
 Turn 75 - 76
   1 2 3 4 5 6 7 8 9
-1 o x x o . o x x x 
-2 o o x o o o o o x 
-3 x x x x x x . o x 
-4 o o x o x o o o o 
-5 o x x x x x o x x 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 . x x x x o o o o 
+1 x x x x o . . x x 
+2 x o x o o o o o x 
+3 x x x x o o o o . 
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o o o o o . 
+8 x o x o o o o o x 
+9 x x x x x o . o x 
 Turn 77 - 78
   1 2 3 4 5 6 7 8 9
-1 o x x o . o x x x 
-2 o o x o o o o o x 
-3 x x x x x x o o x 
-4 o o x o x o o o o 
-5 o x x x x x o x x 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o . 
-9 x x x x x o o o o 
+1 x x x x o . o x x 
+2 x o x o o o o o x 
+3 x x x x o o o o . 
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o o o o o x 
+8 x o x o o o o o x 
+9 x x x x x o . o x 
 Turn 79 - 80
   1 2 3 4 5 6 7 8 9
-1 o x x o o o x x x 
-2 o o x o o o o o x 
-3 x x x x x x o o x 
-4 o o x o x o o o o 
-5 o x x x x x o x x 
-6 x o o o x o o o x 
-7 x x o o x x x o o 
-8 x x x o o o x o x 
-9 x x x x x o o o o 
-x player: 23
-o player: 25
-no one lands: 16
- o o 
-2 o x x x o x o x o 
+1 x x x x o o o x x 
+2 x o x o o o o o x 
 3 x x x x o o o o x 
-4 x x x x x x o x x 
-5 x x o o x x o x x 
-6 x x o x o o o o x 
-7 o x o o o x o x x 
-8 x x o x x x x x o 
-9 o o o o o o x o o 
-x player: 26
-o player: 23
-no one lands: 15
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o o o o o x 
+8 x o x o o o o o x 
+9 x x x x x o . o x 
+Turn 81
+  1 2 3 4 5 6 7 8 9
+1 x x x x o o o x x 
+2 x o x o o o o o x 
+3 x x x x o o o o x 
+4 x o x o o o o o x 
+5 x x x x o x o x x 
+6 x o x o o o o o x 
+7 x x x o o o o o x 
+8 x o x o o o o o x 
+9 x x x x x o x o x 
+x player: 25
+o player: 31
+no one lands: 8
+

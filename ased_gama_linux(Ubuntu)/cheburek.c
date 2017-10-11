@@ -94,7 +94,7 @@ int menu(FILE *save,char (*field)[9],char * AI){
         case 4:
             system("clear");
 
-            printf("Cheburek\nCreated by Bredian\n2017, Dolgop\n");
+            printf("Cheburek\nCreated by Bredian\nTetric stategy by Ased\n2017, Dolgop\n");
 
             sleep(1);
             system("clear");

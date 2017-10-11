@@ -5,7 +5,7 @@
 //  Created by Александр  Крылов on 9/8/17.
 //  Copyright © 2017 Александр  Крылов. All rights reserved.
 //
-
+#include<GLUT/glut.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -16,9 +16,7 @@
 #include <sys/wait.h>
 #include <curses.h>
 #include <ctype.h>
-
 int fl;
-
 int load_game(FILE * save,char (*field)[9]);
 int autosave(FILE * save,char (*field)[9]);
 // printing field
@@ -28,7 +26,6 @@ int print_field(char (*field)[9]){
     for(i=0;i<9;i++){
         printf("%d ",i+1);
         for(j=0;j<9;j++){
-        
             if(field[i][j]=='x') printf("\033[22;31m%c \033[22;30m",field[i][j]);
             else if(field[i][j]=='o') printf("\033[22;32m%c \033[22;30m",field[i][j]);
             else printf("%c ",field[i][j]);
@@ -45,14 +42,12 @@ int print_demo(char (*field)[9]){
     for(i=0;i<9;i++){
         printf("%d ",i+1);
         for(j=0;j<9;j++){
-            
             if(field[i][j]=='x') printf("\033[22;31m%c \033[22;30m",field[i][j]);
             else if(field[i][j]=='o') printf("\033[22;32m%c \033[22;30m",field[i][j]);
             else printf("%c ",field[i][j]);
         }
         printf("\n");
     }
-
     return 0;
 }
 //menu
@@ -97,7 +92,7 @@ int menu(FILE *save,char (*field)[9],char * AI,int pid){
         case 4:
             system("clear");
             kill(pid,SIGSTOP);
-            printf("Cheburek\nCreated by Bredian\n2017, Dolgop\n");
+            printf("Cheburek\nCreated by Bredian\nTetric stategy by Ased\n2017, Dolgop\n");
             system("afplay Credit.mp3");
             system("clear");
             kill(pid,SIGCONT);
@@ -234,6 +229,7 @@ int demo(char (*demo)[9],int status){
 }
 
 int main(int argc,  char * argv[], char * envp[]) {
+
     int fd[2];
     mysymb = argv[2];
     int status;
